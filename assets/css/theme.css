@@ -55,6 +55,7 @@ body {
 }
 
 /* Ensure all text elements in sections have proper colors */
+.dark-background,
 .dark-background h1,
 .dark-background h2, 
 .dark-background h3,
@@ -63,7 +64,9 @@ body {
 .dark-background h6,
 .dark-background p,
 .dark-background span,
-.dark-background li {
+.dark-background li,
+.dark-background .section-title,
+.dark-background .section-description {
   color: var(--dark-text-primary) !important;
 }
 
@@ -108,6 +111,55 @@ body {
 
 .light-background .achievement-item span {
   color: var(--dark-bg-primary) !important;
+}
+
+/* Contact section text fixes */
+.contact .section-title,
+.contact .section-description,
+.contact h2,
+.contact p {
+  color: var(--dark-text-primary) !important;
+}
+
+/* Skills section text fixes */
+.skills .section-title h2,
+.skills .section-title p {
+  color: var(--dark-text-primary) !important;
+}
+
+.skills.dark-background .section-title h2,
+.skills.dark-background .section-title p {
+  color: var(--dark-text-primary) !important;
+}
+
+/* Ensure all dark backgrounds have light text */
+.dark-background * {
+  color: var(--dark-text-primary) !important;
+}
+
+/* Override for specific elements that should keep their accent colors */
+.dark-background .btn,
+.dark-background .tech-tag,
+.dark-background .skill-item i,
+.dark-background .expertise-icon i,
+.dark-background .service-item .icon i {
+  color: inherit !important;
+}
+
+/* Fix for achievement icons to keep their colors */
+.achievement-item i {
+  color: inherit !important;
+}
+
+/* Tech badges should remain styled */
+.tech-tag {
+  background: rgba(20, 157, 221, 0.2);
+  color: var(--accent-primary) !important;
+  border: 1px solid var(--accent-primary);
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 500;
 }
 
 .light-background {
