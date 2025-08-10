@@ -50,8 +50,8 @@ body {
 }
 
 .light-background {
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-  color: var(--dark-bg-primary);
+  background: linear-gradient(135deg, var(--dark-bg-secondary) 0%, var(--dark-bg-accent) 100%);
+  color: var(--dark-text-primary);
 }
 
 /* Ensure all text elements in sections have proper colors */
@@ -79,7 +79,7 @@ body {
 .light-background p,
 .light-background span,
 .light-background li {
-  color: var(--dark-bg-primary) !important;
+  color: var(--dark-text-primary) !important;
 }
 
 /* Section title overrides */
@@ -90,7 +90,7 @@ body {
 
 .light-background .section-title h2,
 .light-background .container.section-title h2 {
-  color: var(--dark-bg-primary) !important;
+  color: var(--dark-text-primary) !important;
 }
 
 /* Portfolio specific fixes */
@@ -99,9 +99,12 @@ body {
   color: var(--dark-text-primary) !important;
 }
 
-.light-background .portfolio-info h4,
-.light-background .portfolio-info p {
-  color: var(--dark-bg-primary) !important;
+.portfolio .portfolio-info h4 {
+  color: var(--accent-primary) !important;
+}
+
+.portfolio .portfolio-info p {
+  color: var(--dark-text-secondary) !important;
 }
 
 /* Achievement items */
@@ -110,7 +113,7 @@ body {
 }
 
 .light-background .achievement-item span {
-  color: var(--dark-bg-primary) !important;
+  color: var(--dark-text-primary) !important;
 }
 
 /* Contact section text fixes */
@@ -153,7 +156,7 @@ body {
 
 /* About section text fixes for light backgrounds */
 .light-background * {
-  color: var(--dark-bg-primary) !important;
+  color: var(--dark-text-primary) !important;
 }
 
 /* Override for specific accent elements in light backgrounds */
@@ -166,7 +169,7 @@ body {
 /* Ensure personal info items have proper colors */
 .light-background .info-item strong,
 .light-background .info-item span {
-  color: var(--dark-bg-primary) !important;
+  color: var(--dark-text-primary) !important;
 }
 
 .light-background .info-item i {
@@ -182,11 +185,6 @@ body {
   border-radius: 15px;
   font-size: 0.85rem;
   font-weight: 500;
-}
-
-.light-background {
-  background: linear-gradient(135deg, var(--dark-bg-secondary) 0%, var(--dark-bg-accent) 100%);
-  color: var(--dark-text-primary);
 }
 
 /* =================================
