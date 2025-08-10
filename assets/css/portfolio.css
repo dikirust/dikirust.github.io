@@ -242,3 +242,25 @@
 .isotope-container.filtering {
   opacity: 0.5;
 }
+
+/* =================================
+   PORTFOLIO LINKS STYLING
+   ================================= */
+
+/* Portfolio links text sizing */
+.details-link {
+  font-size: 0.85rem !important;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--accent-primary);
+  transition: all 0.3s ease;
+}
+
+.details-link:hover {
+  color: var(--accent-secondary);
+  text-decoration: underline;
+}
+
+.details-link i {
+  font-size: 0.9rem;
+}
