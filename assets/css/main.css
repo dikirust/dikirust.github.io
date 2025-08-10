@@ -58,6 +58,267 @@
 }
 
 /*--------------------------------------------------------------
+# Enhanced Portfolio Styles
+--------------------------------------------------------------*/
+
+/* Hero Section Enhancements */
+.hero-stats {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.stat-item {
+  text-align: center;
+  color: white;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Expertise Section */
+.expertise {
+  padding: 80px 0;
+}
+
+.expertise-item {
+  background: var(--surface-color);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(20, 157, 221, 0.1);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+.expertise-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(20, 157, 221, 0.2);
+  border-color: var(--accent-color);
+}
+
+.expertise-icon {
+  margin-bottom: 1.5rem;
+}
+
+.expertise-icon i {
+  font-size: 3rem;
+  color: var(--accent-color);
+  background: linear-gradient(45deg, var(--accent-color), #1a8bb8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.expertise-item h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--heading-color);
+}
+
+.expertise-item p {
+  color: var(--default-color);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.tech-tag {
+  background: linear-gradient(45deg, var(--accent-color), #1a8bb8);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* About Section Enhancements */
+.achievements-highlight {
+  background: linear-gradient(135deg, #f8fafc 0%, #e3f4fd 100%);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid var(--accent-color);
+}
+
+.achievement-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.achievement-item i {
+  font-size: 1.2rem;
+}
+
+/* Portfolio Enhancements */
+.ai-project-placeholder,
+.iot-project-placeholder,
+.bi-project-placeholder,
+.chatbot-project-placeholder,
+.anomaly-project-placeholder {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.iot-project-placeholder {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.bi-project-placeholder {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.chatbot-project-placeholder {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.anomaly-project-placeholder {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.ai-project-placeholder:hover,
+.iot-project-placeholder:hover,
+.bi-project-placeholder:hover,
+.chatbot-project-placeholder:hover,
+.anomaly-project-placeholder:hover {
+  transform: scale(1.05);
+}
+
+.portfolio-item .portfolio-info {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+/* Enhanced Button Styles */
+.btn-primary {
+  background: linear-gradient(45deg, var(--accent-color), #1a8bb8);
+  border: none;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(20, 157, 221, 0.4);
+}
+
+.btn-outline-primary {
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  border-radius: 25px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background: var(--accent-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(20, 157, 221, 0.4);
+}
+
+/* Skills Section Enhancements */
+.progress-bar {
+  background: linear-gradient(45deg, var(--accent-color), #1a8bb8);
+  border-radius: 10px;
+}
+
+.progress-bar-wrap {
+  background: #e9ecef;
+  border-radius: 10px;
+}
+
+/* Resume Section Enhancements */
+.resume-item {
+  background: var(--surface-color);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid var(--accent-color);
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.resume-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 768px) {
+  .hero-stats .stat-number {
+    font-size: 2rem;
+  }
+  
+  .expertise-item {
+    margin-bottom: 2rem;
+  }
+  
+  .tech-tags {
+    justify-content: center;
+  }
+}
+
+/* Animation Enhancements */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Loading Animation for Stats */
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.stat-number {
+  animation: countUp 0.8s ease-out;
+}
+
+/*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
 body {

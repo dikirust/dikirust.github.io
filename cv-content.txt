@@ -1,0 +1,98 @@
+DIKI RUSTIAN
++628999861303 | diki.rstn@gmail.com | https://www.linkedin.com/in/diki-rustian/ | https://www.github.com/dikirust/
+Lead Engineer and IT professional with 5+ years experience in IoT, process optimization, and AI/ML engineering. Develops web applications and implements smart solutions to enhance business operations and get insight from database.
+Expertise
+ 
+•	IoT & Automation 
+•	Process Improvement 
+•	Project Management 
+•	Team Leadership
+•	Tech Architecture Design
+•	Software Development (PHP, HTML, JS, Laravel, Codeigniter) 
+•	AI/ML Engineering (LLMs, NLP, ML, Python, TensorFlow, Keras, Orange Data Mining) 
+
+•	Data Analysis & Visualization (Bliv Data Pipeline, Bliv Dashboard, Apache Superset,  Tableau, Matplotlib, Seaborn, Pandas) 
+•	Cloud Computing (VertexAI, Big Query,Google Cloud Storage (S3), GCP, Azure basic, AWS basic) 
+•	Database (MySQL)
+
+
+
+
+ 
+Professional Experience
+
+Senior AI & ML Engineer - PT.Merdeka Copper Gold – Jakarta	2025 – Present	 
+Core Application and Automation:		
+•	Led the development and implementation of AI-powered solutions, driving innovation in procurement, maintenance, and mining production data management.
+•	 Designed and built real-time AI chatbots that integrate seamlessly with databases (Big Query), documents, and web search.
+•	Pioneered computer vision systems for lithology analysis from core photos in nickel mining using YOLO v11, improving operational insights and efficiency.
+•	Worked cross-functionally with various teams to ensure the AI systems align with business goals, continuously optimizing performance and integration.
+•	Focused on developing intelligent systems that streamline data management, support decision-making, and reduce operational complexities.
+•	Led the exploration and application of cutting-edge AI and ML techniques to improve mining operations and drive strategic decision-making.
+
+Lead Engineer - PT.YKK ZIPPER INDONESIA– Depok	  	 2019 – 2025
+Operational Optimization & Process Improvement:
+•	Led teams of 3 to 8 development staff on various projects, collaborating across departments. 
+•	I have multi-role experience in various projects, contributing as a Project Manager, Fullstack Web Developer, and also as an AI/ML Engineer.
+•	Enhanced key KPIs, including quality, cost, delivery, safety, and productivity, through strategic initiatives and innovative solutions
+•	Held weekly meetings with users to gather feedback and ensure alignment with business needs. 
+•	Reported key performance indicator (KPI) improvements monthly to the Asia meeting, demonstrating progress and impact. 
+•	Received the "Most Impressive Project" award from YKK Corporation at the TPM World Meeting in Kurobe, Japan, recognizing outstanding contributions. 
+•	Achieved Total $250,000 USD in annual cost savings through busine process and quality improvements.
+•	Delivered significant intangible benefits, including: 
+•	Improved team members' analytical thinking skills.
+•	Increased customer satisfaction.
+•	Reduction in CO2 emissions by 1.44 tons per year.
+
+
+
+
+
+
+
+	Software Development Projects:
+•	AI-Powered Dye Matching: 
+Developed and implemented an AI-driven solution for dye matching, resulting in a 70% reduction in lead time for creating new colors.
+•	Automated Painting Parameter Setting:
+Develop an AI system using computer vision to automate painting parameter settings, targeting reduce rework by 75%.
+•	Silicone Treatment Enhancement: 
+Develop anomaly detection computer vision to optimize the silicone treatment process, targeting 55% reduction in peel-off problems.
+•	Business Intelligence Dashboards: 
+Created business intelligence dashboards for Tambullar and Auto Conveyor processes, resulting in a 10-15% reduction in paper usage and a 10-30% faster lead time process.
+•	Claim Reduction: 
+Implemented a system to prevent outflow at the Scratching Boiling stage, reducing claims by 2.
+•	Loss Ratio Reduction:
+Developed digital checksheet applications for assembling and MTC diecast processes, contributing to a 10-20% reduction in loss ratio.
+
+Education
+
+ 
+Master of Information Technology – Pamulang University						2024 – Present
+•	Current GPA 3.84/4.00
+Metallurgical Engineering – Sultan Ageng Tirtayasa University						2014 – 2019
+•	GPA 3.28/4.00
+
+Achievement & Awards
+ 	
+•	Most Impressive Project Award TPM World Contest (2024) -  Held in YKK Corporation, Kurobe, Japan with the project Improve Machine OEE by Focusing Maintenance and Kaizen Activities
+•	Top 10 AI Healthkaton National Competition by BPJS Kesehatan (2024) - Category Artificial Intelligence, BPJS Kesehatan, Indonesia (#3 in Apps Presentation Stage) with the project Food Recommendation System & Product Composition Analysis using Generative AI for Diabetes Management
+•	AI Research & Publication (2025) - Presented as a speaker at the 3rd National Seminar: Leveraging AI Technology and Data Analytics to Support National Sovereignty in Energy, Environment, and Food. Delivered a research presentation titled "Evaluation of the Multimodal Gemini Model in Analyzing Nutritional Information of Products".  This research published on Seminar Proceedings (PROKASDADIK).
+•	Top 8 AI Hackathon National Competition by ITB and Telkomsel (2025) - AI-Powered Alarm Diagnostic Assistant: Integrating BLIV and Vertex AI for Smart Industrial Maintenance with RAG.
+•	Top 10 Hackathon PPATK 2025 (Anti Money Laundering Institution) still on competition in semi final stages – Anti Money Laundering Institution semifinalist for "Ensemble Learning for money laundering detection and Investigator Agent Chatbot"
+
+Certifications 
+•	Certified Japanese Language Proficiency Test N5
+•	Dicoding : Cloud Practitioner Essentials (AWS), Machine Learning, Python, Data Visualization, DevOps
+•	Nusacodes: Bootcamp Web Developer (Full Stack)
+•	Nusacodes: Media Online Website Project
+•	MySkills : Front End Website Development (VueJS)
+•	Talenta AI : Microsoft Azure Data Fundamentals
+
+Organizational
+
+ 
+BEM FT UNTIRTA – Faculty Level									2017 – 2018 
+•	Head of Research, Industrial, and Technology Department
+HIMAMET FT UNTIRTA – Major Level									2016 – 2017
+•	Head of Research, Profession, and Academic Department
+
