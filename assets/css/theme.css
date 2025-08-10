@@ -50,6 +50,67 @@ body {
 }
 
 .light-background {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  color: var(--dark-bg-primary);
+}
+
+/* Ensure all text elements in sections have proper colors */
+.dark-background h1,
+.dark-background h2, 
+.dark-background h3,
+.dark-background h4,
+.dark-background h5,
+.dark-background h6,
+.dark-background p,
+.dark-background span,
+.dark-background li {
+  color: var(--dark-text-primary) !important;
+}
+
+.light-background h1,
+.light-background h2,
+.light-background h3,
+.light-background h4,
+.light-background h5,
+.light-background h6,
+.light-background p,
+.light-background span,
+.light-background li {
+  color: var(--dark-bg-primary) !important;
+}
+
+/* Section title overrides */
+.section-title h2,
+.container.section-title h2 {
+  color: var(--dark-text-primary) !important;
+}
+
+.light-background .section-title h2,
+.light-background .container.section-title h2 {
+  color: var(--dark-bg-primary) !important;
+}
+
+/* Portfolio specific fixes */
+.portfolio-info h4,
+.portfolio-info p {
+  color: var(--dark-text-primary) !important;
+}
+
+.light-background .portfolio-info h4,
+.light-background .portfolio-info p {
+  color: var(--dark-bg-primary) !important;
+}
+
+/* Achievement items */
+.achievement-item span {
+  color: var(--dark-text-primary) !important;
+}
+
+.light-background .achievement-item span {
+  color: var(--dark-bg-primary) !important;
+}
+
+.light-background {
   background: linear-gradient(135deg, var(--dark-bg-secondary) 0%, var(--dark-bg-accent) 100%);
   color: var(--dark-text-primary);
 }
@@ -605,6 +666,90 @@ body {
 ::-webkit-scrollbar-thumb {
   background: var(--accent-gradient);
   border-radius: 4px;
+}
+
+/* =================================
+   HERO BUTTONS ENHANCEMENT
+   ================================= */
+
+.hero-buttons .btn {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.hero-buttons .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.btn-secondary {
+  background: linear-gradient(45deg, #6c757d, #495057);
+  border: none;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(45deg, #495057, #343a40);
+  color: white;
+}
+
+.btn-info {
+  background: linear-gradient(45deg, #0e76a8, #1a8bb8);
+  border: none;
+  color: white;
+}
+
+.btn-info:hover {
+  background: linear-gradient(45deg, #1a8bb8, #149ddd);
+  color: white;
+}
+
+/* =================================
+   CONTACT SECTION
+   ================================= */
+
+.contact-item {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.1);
+}
+
+.contact-item h5 {
+  margin: 1rem 0 0.5rem 0;
+  font-weight: 600;
+  color: var(--dark-text-primary) !important;
+}
+
+.contact-item p {
+  margin: 0;
+  color: var(--dark-text-secondary) !important;
+}
+
+.contact-buttons .btn {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.contact-buttons .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
 }
 
 ::-webkit-scrollbar-thumb:hover {
