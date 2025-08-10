@@ -318,6 +318,70 @@
   animation: countUp 0.8s ease-out;
 }
 
+/* Services Section Enhancements */
+.services .service-item {
+  background: var(--surface-color);
+  padding: 2rem;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+.services .service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(20, 157, 221, 0.2);
+  border-color: var(--accent-color);
+}
+
+.services .service-item .icon {
+  margin-right: 1.5rem;
+}
+
+.services .service-item .icon i {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  background: linear-gradient(45deg, var(--accent-color), #1a8bb8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.services .service-item .title {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--contrast-color);
+  font-weight: 600;
+}
+
+.services .service-item .description {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-features li {
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0.3rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.service-features li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/

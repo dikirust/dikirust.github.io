@@ -226,4 +226,111 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  /**
+   * Enhanced Portfolio Interactions
+   */
+  
+  // Add smooth hover effects for expertise items
+  document.querySelectorAll('.expertise-item').forEach(item => {
+    item.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateY(-10px) scale(1.02)';
+    });
+    
+    item.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0) scale(1)';
+    });
+  });
+
+  // Add click to copy functionality for contact info
+  document.querySelectorAll('[data-copy]').forEach(element => {
+    element.addEventListener('click', function() {
+      const textToCopy = this.getAttribute('data-copy');
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        // Show a temporary success message
+        const originalText = this.textContent;
+        this.textContent = 'Copied!';
+        this.style.color = '#28a745';
+        setTimeout(() => {
+          this.textContent = originalText;
+          this.style.color = '';
+        }, 2000);
+      });
+    });
+  });
+
+  // Add typing effect enhancement
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-fade-in-up');
+      }
+    });
+  }, observerOptions);
+
+  // Observe all sections for animation
+  document.querySelectorAll('section').forEach(section => {
+    observer.observe(section);
+  });
+
+  // Enhanced stats counter animation
+  const statsCounters = document.querySelectorAll('.stat-number');
+  let hasAnimated = false;
+
+  const animateStats = () => {
+    if (hasAnimated) return;
+    
+    statsCounters.forEach(counter => {
+      const target = parseInt(counter.getAttribute('data-purecounter-end'));
+      const duration = parseInt(counter.getAttribute('data-purecounter-duration')) * 1000;
+      let current = 0;
+      const increment = target / (duration / 16); // 60fps
+      
+      const updateCounter = () => {
+        current += increment;
+        if (current < target) {
+          counter.textContent = Math.floor(current);
+          requestAnimationFrame(updateCounter);
+        } else {
+          counter.textContent = target;
+        }
+      };
+      
+      updateCounter();
+    });
+    
+    hasAnimated = true;
+  };
+
+  // Trigger stats animation when hero section is visible
+  const heroSection = document.querySelector('#hero');
+  if (heroSection) {
+    const heroObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setTimeout(animateStats, 1000); // Delay for better effect
+        }
+      });
+    });
+    
+    heroObserver.observe(heroSection);
+  }
+
+  // Portfolio filter enhancement
+  document.querySelectorAll('.portfolio-filters li').forEach(filter => {
+    filter.addEventListener('click', function() {
+      // Add loading state
+      const portfolioContainer = document.querySelector('.isotope-container');
+      portfolioContainer.style.opacity = '0.5';
+      
+      setTimeout(() => {
+        portfolioContainer.style.opacity = '1';
+      }, 300);
+    });
+  });
+
 })();
