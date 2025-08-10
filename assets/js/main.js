@@ -333,4 +333,146 @@
     });
   });
 
+  /**
+   * Enhanced scroll animations
+   */
+  const scrollObserverOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (entry.target.classList.contains('stagger-animation')) {
+          // Staggered animation for multiple items
+          const items = entry.target.querySelectorAll('.stagger-animation');
+          items.forEach((item, index) => {
+            setTimeout(() => {
+              item.classList.add('visible');
+            }, index * 100);
+          });
+        } else {
+          entry.target.classList.add('visible');
+        }
+      }
+    });
+  }, scrollObserverOptions);
+
+  // Apply animations to elements
+  document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .scale-in, .scroll-reveal').forEach(el => {
+    fadeObserver.observe(el);
+  });
+
+  /**
+   * Skill bars animation
+   */
+  const skillBars = document.querySelectorAll('.progress-bar');
+  const skillObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const progressBar = entry.target;
+        const width = progressBar.getAttribute('aria-valuenow');
+        progressBar.style.setProperty('--progress-width', width + '%');
+        progressBar.classList.add('progress-fill');
+      }
+    });
+  }, scrollObserverOptions);
+
+  skillBars.forEach(bar => skillObserver.observe(bar));
+
+  /**
+   * Enhanced hover effects
+   */
+  document.querySelectorAll('.expertise-item, .service-item, .portfolio-item').forEach(item => {
+    item.addEventListener('mouseenter', function() {
+      this.classList.add('hover-lift');
+    });
+    
+    item.addEventListener('mouseleave', function() {
+      this.classList.remove('hover-lift');
+    });
+  });
+
+  /**
+   * Smooth scrolling enhancement
+   */
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+
+  /**
+   * Dynamic particles (performance optimized)
+   */
+  const createParticles = () => {
+    const heroSection = document.querySelector('#hero');
+    if (!heroSection || window.innerWidth < 768) return; // Skip on mobile
+    
+    const particlesContainer = document.createElement('div');
+    particlesContainer.className = 'particles';
+    heroSection.appendChild(particlesContainer);
+    
+    for (let i = 0; i < 9; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.left = Math.random() * 100 + '%';
+      particle.style.animationDelay = Math.random() * 8 + 's';
+      particlesContainer.appendChild(particle);
+    }
+  };
+
+  // Create particles after page load
+  window.addEventListener('load', createParticles);
+
+  /**
+   * Theme toggle (for future dark/light mode)
+   */
+  const createThemeToggle = () => {
+    const themeToggle = document.createElement('button');
+    themeToggle.className = 'theme-toggle';
+    themeToggle.innerHTML = '<i class="bi bi-sun"></i>';
+    themeToggle.style.cssText = `
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
+      background: rgba(30, 41, 59, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #149ddd;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    `;
+    
+    document.body.appendChild(themeToggle);
+    
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('light-theme');
+      const icon = themeToggle.querySelector('i');
+      if (document.body.classList.contains('light-theme')) {
+        icon.className = 'bi bi-moon';
+      } else {
+        icon.className = 'bi bi-sun';
+      }
+    });
+  };
+
+  // Uncomment to enable theme toggle
+  // createThemeToggle();
+
 })();

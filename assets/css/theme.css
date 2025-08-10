@@ -1,0 +1,658 @@
+/*
+ * Theme Styles - Diki Rustian Portfolio
+ * Dark theme and color schemes
+ * File: theme.css
+ * Last Updated: August 2025
+ */
+
+/* =================================
+   DARK THEME VARIABLES
+   ================================= */
+
+:root {
+  /* Dark Theme Colors */
+  --dark-bg-primary: #0f172a;
+  --dark-bg-secondary: #1e293b;
+  --dark-bg-accent: #334155;
+  --dark-text-primary: #f8fafc;
+  --dark-text-secondary: #cbd5e1;
+  --dark-text-muted: #94a3b8;
+  
+  /* Accent Colors */
+  --accent-primary: #149ddd;
+  --accent-secondary: #1a8bb8;
+  --accent-gradient: linear-gradient(45deg, #149ddd, #1a8bb8);
+  
+  /* Status Colors */
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+  --info-color: #3b82f6;
+}
+
+/* =================================
+   GLOBAL DARK THEME
+   ================================= */
+
+body {
+  background-color: var(--dark-bg-primary);
+  color: var(--dark-text-primary);
+  font-family: 'Roboto', system-ui, sans-serif;
+}
+
+/* =================================
+   SECTION BACKGROUNDS
+   ================================= */
+
+.dark-background {
+  background: linear-gradient(135deg, var(--dark-bg-primary) 0%, var(--dark-bg-secondary) 100%);
+  color: var(--dark-text-primary);
+}
+
+.light-background {
+  background: linear-gradient(135deg, var(--dark-bg-secondary) 0%, var(--dark-bg-accent) 100%);
+  color: var(--dark-text-primary);
+}
+
+/* =================================
+   PORTFOLIO FILTER ENHANCEMENT
+   ================================= */
+
+.portfolio .portfolio-filters li {
+  background: rgba(30, 41, 59, 0.6);
+  color: var(--dark-text-secondary);
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.portfolio .portfolio-filters li:hover,
+.portfolio .portfolio-filters li.filter-active {
+  background: rgba(20, 157, 221, 0.3) !important;
+  color: var(--accent-primary) !important;
+  border-color: var(--accent-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(20, 157, 221, 0.2);
+}
+
+/* =================================
+   SKILLS GRID LAYOUT
+   ================================= */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.skill-item {
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.skill-item:hover {
+  background: rgba(30, 41, 59, 0.95);
+  border-color: var(--accent-primary);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(20, 157, 221, 0.2);
+}
+
+.skill-item i {
+  font-size: 3rem;
+  color: var(--accent-primary);
+  margin-bottom: 1rem;
+  display: block;
+  filter: drop-shadow(0 0 10px rgba(20, 157, 221, 0.3));
+}
+
+.skill-item span {
+  color: var(--dark-text-primary);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  
+  .skill-item {
+    padding: 1.5rem 1rem;
+  }
+  
+  .skill-item i {
+    font-size: 2.5rem;
+  }
+}
+
+/* =================================
+   HERO SECTION ENHANCEMENTS
+   ================================= */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Animated tech grid background */
+.tech-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(20, 157, 221, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(20, 157, 221, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+/* Floating particles */
+.floating-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.floating-particles::before,
+.floating-particles::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--accent-primary);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-particles::before {
+  top: 20%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.floating-particles::after {
+  top: 60%;
+  right: 20%;
+  animation-delay: 3s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) scale(1); opacity: 0.7; }
+  50% { transform: translateY(-20px) scale(1.2); opacity: 1; }
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Interactive hero content */
+.hero h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #149ddd, #1a8bb8, #0ea5e9);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =================================
+   CARDS AND CONTAINERS
+   ================================= */
+
+.expertise-item,
+.resume-item,
+.service-item {
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.expertise-item:hover,
+.resume-item:hover,
+.service-item:hover {
+  background: rgba(30, 41, 59, 0.95);
+  border-color: var(--accent-primary);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(20, 157, 221, 0.2);
+}
+
+/* =================================
+   SERVICES SECTION ENHANCEMENT
+   ================================= */
+
+.services .service-item .icon {
+  background: rgba(20, 157, 221, 0.2);
+  color: var(--accent-primary);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  transition: all 0.3s ease;
+}
+
+.services .service-item .icon i {
+  font-size: 1.8rem;
+  filter: drop-shadow(0 0 10px rgba(20, 157, 221, 0.3));
+}
+
+.services .service-item:hover .icon {
+  background: var(--accent-primary);
+  color: white;
+  transform: scale(1.1);
+}
+
+.services .service-item .title {
+  color: var(--dark-text-primary);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.services .service-item .description {
+  color: var(--dark-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.services .service-item .service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.services .service-item .service-features li {
+  color: var(--dark-text-muted);
+  font-size: 0.9rem;
+  padding: 0.3rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.services .service-item .service-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent-primary);
+  font-weight: bold;
+}
+
+/* =================================
+   ACHIEVEMENTS HIGHLIGHT
+   ================================= */
+
+.achievements-highlight {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(51, 65, 85, 0.8) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 4px solid var(--accent-primary);
+}
+
+.achievement-item {
+  color: var(--dark-text-secondary);
+}
+
+.achievement-item i {
+  filter: drop-shadow(0 0 5px currentColor);
+}
+
+/* =================================
+   HERO STATS ENHANCEMENTS
+   ================================= */
+
+.hero-stats {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.stat-item {
+  padding: 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  background: rgba(20, 157, 221, 0.1);
+  transform: scale(1.05);
+}
+
+.stat-number {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(20, 157, 221, 0.5);
+}
+
+/* =================================
+   BUTTONS ENHANCEMENT
+   ================================= */
+
+.btn-primary {
+  background: var(--accent-gradient);
+  border: none;
+  box-shadow: 0 5px 15px rgba(20, 157, 221, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-outline-primary {
+  border: 2px solid var(--accent-primary);
+  color: var(--accent-primary);
+  background: transparent;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-outline-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--accent-gradient);
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.btn-outline-primary:hover::before {
+  width: 100%;
+}
+
+.btn-outline-primary:hover {
+  color: white;
+  border-color: var(--accent-primary);
+}
+
+.btn-outline-secondary {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: var(--dark-text-secondary);
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-secondary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.btn-outline-secondary:hover {
+  color: var(--dark-text-primary);
+  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(30, 41, 59, 0.8);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-secondary:hover::before {
+  width: 100%;
+}
+
+/* =================================
+   PROGRESS BARS
+   ================================= */
+
+.progress-bar-wrap {
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.progress-bar {
+  background: var(--accent-gradient);
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  animation: progressShine 2s ease-in-out infinite;
+}
+
+@keyframes progressShine {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* =================================
+   NAVIGATION ENHANCEMENTS
+   ================================= */
+
+#header {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(20px);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navmenu a {
+  color: var(--dark-text-secondary);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navmenu a:hover,
+.navmenu a.active {
+  color: var(--accent-primary);
+}
+
+.navmenu a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 3px;
+  height: 0;
+  background: var(--accent-gradient);
+  transition: height 0.3s ease;
+  transform: translateY(-50%);
+  border-radius: 0 3px 3px 0;
+}
+
+.navmenu a:hover::before,
+.navmenu a.active::before {
+  height: 20px;
+}
+
+/* =================================
+   FOOTER ENHANCEMENTS
+   ================================= */
+
+.footer {
+  background: var(--dark-bg-primary);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--dark-text-secondary);
+  padding: 2rem 0;
+  margin-top: 0;
+}
+
+/* Ensure all sections flow seamlessly */
+.section {
+  margin-bottom: 0;
+  padding-bottom: 4rem;
+}
+
+.section:last-child {
+  padding-bottom: 2rem;
+}
+
+/* Global background consistency */
+body {
+  background: var(--dark-bg-primary);
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  background: var(--dark-bg-primary);
+}
+
+/* Ensure no white gaps between sections */
+.section.light-background {
+  background: linear-gradient(135deg, var(--dark-bg-secondary) 0%, var(--dark-bg-accent) 100%);
+  margin: 0;
+  padding: 4rem 0;
+}
+
+.section.dark-background {
+  background: linear-gradient(135deg, var(--dark-bg-primary) 0%, var(--dark-bg-secondary) 100%);
+  margin: 0;
+  padding: 4rem 0;
+}
+
+/* =================================
+   SCROLLBAR STYLING
+   ================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-gradient);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
+
+/* =================================
+   RESPONSIVE DESIGN
+   ================================= */
+
+@media (max-width: 768px) {
+  .hero-stats {
+    margin: 2rem 0;
+    padding: 1.5rem;
+  }
+  
+  .stat-item {
+    margin-bottom: 1rem;
+  }
+  
+  .tech-grid {
+    background-size: 30px 30px;
+  }
+}
+
+/* =================================
+   LOADING STATES
+   ================================= */
+
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top-color: var(--accent-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}

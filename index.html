@@ -37,6 +37,11 @@
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
+    
+    <!-- Custom CSS Files -->
+    <link href="assets/css/portfolio.css" rel="stylesheet" />
+    <link href="assets/css/theme.css" rel="stylesheet" />
+    <link href="assets/css/animations.css" rel="stylesheet" />
 
     <!-- =======================================================
   * Template Name: iPortfolio
@@ -72,8 +77,8 @@
          <a href="https://wa.me/628999861303" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
         <a href="mailto:diki.rstn@gmail.com" class="email"><i class="bi bi-envelope-at-fill"></i></a>
         <a href="https://www.instagram.com/dikirust/" class="instagram"><i class="bi bi-instagram"></i></a>
-        <!-- <a href="#" class="google-plus"><i class="bi bi-skype"></i></a> -->
         <a href="https://www.linkedin.com/in/diki-rustian/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/dikirust" class="github"><i class="bi bi-github"></i></a>
       </div>
 
       <nav id="navmenu" class="navmenu">
@@ -145,7 +150,10 @@
     <main class="main">
       <!-- Hero Section -->
       <section id="hero" class="hero section dark-background">
-        <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="" />
+        <div class="hero-background">
+          <div class="tech-grid"></div>
+          <div class="floating-particles"></div>
+        </div>
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <h2>Diki Rustian</h2>
@@ -168,7 +176,7 @@
             <div class="row">
               <div class="col-md-3 col-6">
                 <div class="stat-item">
-                  <span class="stat-number" data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1">5</span>
+                  <span class="stat-number" data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1">6</span>
                   <span class="stat-label">Years Experience</span>
                 </div>
               </div>
@@ -196,8 +204,16 @@
             <a href="https://wa.me/628999861303" class="btn btn-primary py-3 px-4 me-3">
               <i class="bi bi-whatsapp me-2"></i>Hire me
             </a>
-            <a href="https://drive.google.com/file/d/1l-30RjZK4dYLHyBhOdbdczGLWyMly8dt/view?usp=sharing" class="btn btn-outline-primary py-3 px-4">
+            <a href="https://drive.google.com/file/d/1l-30RjZK4dYLHyBhOdbdczGLWyMly8dt/view?usp=sharing" class="btn btn-outline-primary py-3 px-4 me-3">
               <i class="bi bi-download me-2"></i>Download CV
+            </a>
+          </p>
+          <p class="mt-3">
+            <a href="https://github.com/dikirust" class="btn btn-outline-secondary py-2 px-4 me-3" target="_blank">
+              <i class="bi bi-github me-2"></i>GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/diki-rustian/" class="btn btn-outline-secondary py-2 px-4" target="_blank">
+              <i class="bi bi-linkedin me-2"></i>LinkedIn
             </a>
           </p>
         </div>
@@ -205,12 +221,12 @@
       <!-- /Hero Section -->
 
       <!-- About Section -->
-      <section id="about" class="about section">
+      <section id="about" class="about section light-background">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>About</h2>
           <p>
-            Lead Engineer and IT professional with 5+ years experience in IoT, process optimization, and AI/ML engineering. 
+            Lead Engineer and IT professional with 6+ years experience in IoT, process optimization, and AI/ML engineering. 
             I develop web applications and implement smart solutions to enhance business operations and extract meaningful insights from databases.
             Currently serving as Senior AI & ML Engineer at PT. Merdeka Copper Gold, leading innovation in mining industry through cutting-edge AI solutions.
           </p>
@@ -229,7 +245,7 @@
             <div class="col-lg-8 content">
               <h2>Senior AI & ML Engineer &amp; Lead Engineer</h2>
               <p class="fst-italic py-3">
-                Innovative AI/ML Engineer and IoT specialist with over five years of experience driving business transformation through intelligent technology solutions. Currently pioneering AI implementations in mining industry while maintaining expertise in full-stack development and process optimization.
+                Innovative AI/ML Engineer and IoT specialist with over six years of experience driving business transformation through intelligent technology solutions. Currently pioneering AI implementations in mining industry while maintaining expertise in full-stack development and process optimization.
               </p>
               <div class="row">
                 <div class="col-lg-6">
@@ -275,30 +291,30 @@
                 </div>
               </div>
               <div class="achievements-highlight mt-4">
-                <h5><i class="bi bi-trophy-fill text-warning me-2"></i>Recent Achievements</h5>
+                <h5><i class="bi bi-trophy-fill text-warning me-2"></i>Key Achievements</h5>
                 <div class="row g-3">
                   <div class="col-md-6">
                     <div class="achievement-item">
                       <i class="bi bi-award text-primary"></i>
-                      <span>Most Impressive Project Award - TPM World Contest (2024)</span>
+                      <span>Industry Recognition & Awards</span>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="achievement-item">
                       <i class="bi bi-trophy text-success"></i>
-                      <span>Top 10 AI Hackathon BPJS Kesehatan (2024)</span>
+                      <span>AI Innovation Leadership</span>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="achievement-item">
                       <i class="bi bi-graph-up text-info"></i>
-                      <span>$250K USD Annual Cost Savings</span>
+                      <span>$250K+ Annual Cost Savings</span>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="achievement-item">
                       <i class="bi bi-lightbulb text-warning"></i>
-                      <span>70% Lead Time Reduction with AI</span>
+                      <span>70% Process Optimization</span>
                     </div>
                   </div>
                 </div>
@@ -427,175 +443,65 @@
         <div class="container section-title" data-aos="fade-up">
           <h2>Technical Skills</h2>
           <p>
-            Proficiency levels across various technologies and programming languages based on years of hands-on experience and project implementations.
+            Technologies and tools I work with to deliver innovative solutions.
           </p>
         </div>
         <!-- End Section Title -->
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row skills-content skills-animation">
-            <div class="col-lg-6">
-              <div class="progress">
-                <span class="skill"
-                  ><span>Python (AI/ML)</span> <i class="val">95%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="95"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
+          <div class="row skills-content">
+            <div class="col-lg-12">
+              <div class="skills-grid">
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="100">
+                  <i class="bi bi-code-square"></i>
+                  <span>Python</span>
+                </div>
+                
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="150">
+                  <i class="bi bi-cpu"></i>
+                  <span>TensorFlow</span>
+                </div>
+                
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-camera-fill"></i>
+                  <span>Computer Vision</span>
+                </div>
+                
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="250">
+                  <i class="bi bi-graph-up-arrow"></i>
+                  <span>Data Analytics</span>
+                </div>
+                
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-hdd-network"></i>
+                  <span>IoT</span>
+                </div>
+                
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="350">
+                  <i class="bi bi-server"></i>
+                  <span>PHP & Laravel</span>
+                </div>
+                
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bi bi-globe"></i>
+                  <span>JavaScript</span>
+                </div>
+                
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="450">
+                  <i class="bi bi-cloud"></i>
+                  <span>Cloud Platforms</span>
+                </div>
+                
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="500">
+                  <i class="bi bi-kanban"></i>
+                  <span>Project Management</span>
+                </div>
+                
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="550">
+                  <i class="bi bi-bar-chart"></i>
+                  <span>Data Visualization</span>
                 </div>
               </div>
-              <!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"
-                  ><span>TensorFlow & Keras</span> <i class="val">90%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="90"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-              <!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"
-                  ><span>Computer Vision (YOLO)</span> <i class="val">85%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="85"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-              <!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"
-                  ><span>Big Query & Data Analytics</span> <i class="val">88%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="88"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-              <!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"
-                  ><span>IoT & Automation</span> <i class="val">92%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="92"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-              <!-- End Skills Item -->
-            </div>
-
-            <div class="col-lg-6">
-              <div class="progress">
-                <span class="skill"
-                  ><span>PHP & Laravel</span> <i class="val">85%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="85"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-              <!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"
-                  ><span>JavaScript & HTML/CSS</span> <i class="val">80%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="80"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-              <!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"
-                  ><span>Google Cloud Platform</span> <i class="val">82%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="82"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-              <!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"
-                  ><span>Project Management</span> <i class="val">90%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="90"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-              <!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"
-                  ><span>Data Visualization</span> <i class="val">87%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="87"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-              <!-- End Skills Item -->
             </div>
           </div>
         </div>
@@ -603,7 +509,7 @@
       <!-- /Skills Section -->
 
       <!-- Resume Section -->
-      <section id="resume" class="resume section">
+      <section id="resume" class="resume section dark-background">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Resume</h2>
@@ -632,7 +538,6 @@
                   <li>+628999861303</li>
                   <li>diki.rstn@gmail.com</li>
                   <li>LinkedIn: linkedin.com/in/diki-rustian/</li>
-                  <li>GitHub: github.com/dikirust/</li>
                 </ul>
               </div>
               <!-- End Resume Item -->
@@ -777,184 +682,224 @@
               data-aos="fade-up"
               data-aos-delay="200"
             >
+              <!-- AI Dye Matching Project -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai"
               >
                 <div class="portfolio-content h-100">
-                  <img
-                    src="assets/img/portfolio/mockuper (4).png"
-                    class="img-fluid"
-                    alt="AI Dye Matching System"
-                  />
+                  <div class="project-icon-container dye-matching-project">
+                    <i class="bi bi-brush display-1"></i>
+                    <div class="project-overlay">
+                      <span class="project-category">AI/ML</span>
+                    </div>
+                  </div>
                   <div class="portfolio-info">
                     <h4>AI-Powered Dye Matching</h4>
                     <p>Computer Vision & Machine Learning for 70% lead time reduction</p>
-                    <a
-                      href="assets/img/portfolio/mockuper (4).png"
-                      title="AI Dye Matching System"
-                      data-gallery="portfolio-gallery-ai"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
+                    <div class="project-tech-stack">
+                      <span class="tech-badge">Python</span>
+                      <span class="tech-badge">OpenCV</span>
+                      <span class="tech-badge">ML</span>
+                    </div>
                   </div>
                 </div>
               </div>
               <!-- End Portfolio Item -->
 
+              <!-- Portfolio Website Project -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web"
               >
                 <div class="portfolio-content h-100">
-                  <img
-                    src="assets/img/portfolio/app-1.png"
-                    class="img-fluid"
-                    alt="Portfolio Website"
-                  />
+                  <div class="project-icon-container web-portfolio-project">
+                    <i class="bi bi-laptop display-1"></i>
+                    <div class="project-overlay">
+                      <span class="project-category">Web Dev</span>
+                    </div>
+                  </div>
                   <div class="portfolio-info">
                     <h4>Portfolio & Landing Page</h4>
                     <p>Responsive Web Design with Modern UI/UX</p>
+                    <div class="project-tech-stack">
+                      <span class="tech-badge">HTML/CSS</span>
+                      <span class="tech-badge">JavaScript</span>
+                      <span class="tech-badge">Bootstrap</span>
+                    </div>
                     <a
-                      href="assets/img/portfolio/app-1.png"
-                      title="Portfolio Website"
-                      data-gallery="portfolio-gallery-web"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
-                     <a
                       href="https://saviramua.drustech.biz.id/"
                       title="Live Demo"
                       class="details-link"
                       target="_blank"
-                      ><i class="bi bi-link-45deg"></i
-                    ></a>
+                      ><i class="bi bi-link-45deg"></i> Live Demo
+                    </a>
                   </div>
                 </div>
               </div>
               <!-- End Portfolio Item -->
 
+              <!-- Lithology Analysis AI -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai"
               >
                 <div class="portfolio-content h-100">
-                  <div class="ai-project-placeholder">
-                    <i class="bi bi-robot display-1 text-primary"></i>
-                    <h5>Computer Vision for Mining</h5>
+                  <div class="project-icon-container lithology-ai-project">
+                    <i class="bi bi-eye display-1"></i>
+                    <div class="project-overlay">
+                      <span class="project-category">Computer Vision</span>
+                    </div>
                   </div>
                   <div class="portfolio-info">
                     <h4>Lithology Analysis AI</h4>
                     <p>YOLO v11 for core photo analysis in nickel mining operations</p>
+                    <div class="project-tech-stack">
+                      <span class="tech-badge">YOLO v11</span>
+                      <span class="tech-badge">Python</span>
+                      <span class="tech-badge">Mining</span>
+                    </div>
                   </div>
                 </div>
               </div>
               <!-- End Portfolio Item -->
 
+              <!-- IoT Automation System -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-iot"
               >
                 <div class="portfolio-content h-100">
-                  <div class="iot-project-placeholder">
-                    <i class="bi bi-diagram-3 display-1 text-success"></i>
-                    <h5>Automated Painting System</h5>
+                  <div class="project-icon-container iot-automation-project">
+                    <i class="bi bi-cpu display-1"></i>
+                    <div class="project-overlay">
+                      <span class="project-category">IoT/Automation</span>
+                    </div>
                   </div>
                   <div class="portfolio-info">
                     <h4>IoT Automation System</h4>
                     <p>Real-time parameter optimization targeting 75% rework reduction</p>
+                    <div class="project-tech-stack">
+                      <span class="tech-badge">IoT</span>
+                      <span class="tech-badge">Real-time</span>
+                      <span class="tech-badge">Automation</span>
+                    </div>
                   </div>
                 </div>
               </div>
               <!-- End Portfolio Item -->
 
+              <!-- Online Media Platform -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web"
               >
                 <div class="portfolio-content h-100">
-                  <img
-                    src="assets/img/portfolio/app-2.png"
-                    class="img-fluid"
-                    alt="Online Media Platform"
-                  />
+                  <div class="project-icon-container media-platform-project">
+                    <i class="bi bi-broadcast display-1"></i>
+                    <div class="project-overlay">
+                      <span class="project-category">CMS</span>
+                    </div>
+                  </div>
                   <div class="portfolio-info">
                     <h4>Online Media Platform</h4>
                     <p>Content Management & Publishing System</p>
-                    <a
-                      href="assets/img/portfolio/app-2.png"
-                      title="Online Media Platform"
-                      data-gallery="portfolio-gallery-web"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
+                    <div class="project-tech-stack">
+                      <span class="tech-badge">PHP</span>
+                      <span class="tech-badge">CMS</span>
+                      <span class="tech-badge">MySQL</span>
+                    </div>
                   </div>
                 </div>
               </div>
               <!-- End Portfolio Item -->
 
+              <!-- BI Analytics Platform -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai"
               >
                 <div class="portfolio-content h-100">
-                  <div class="bi-project-placeholder">
-                    <i class="bi bi-bar-chart-line display-1 text-info"></i>
-                    <h5>Business Intelligence Dashboard</h5>
+                  <div class="project-icon-container bi-analytics-project">
+                    <i class="bi bi-graph-up-arrow display-1"></i>
+                    <div class="project-overlay">
+                      <span class="project-category">Analytics</span>
+                    </div>
                   </div>
                   <div class="portfolio-info">
                     <h4>BI Analytics Platform</h4>
                     <p>Real-time data visualization with 10-30% process improvement</p>
+                    <div class="project-tech-stack">
+                      <span class="tech-badge">Big Query</span>
+                      <span class="tech-badge">Tableau</span>
+                      <span class="tech-badge">Analytics</span>
+                    </div>
                   </div>
                 </div>
               </div>
               <!-- End Portfolio Item -->
 
+              <!-- E-Commerce Solution -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web"
               >
                 <div class="portfolio-content h-100">
-                  <img
-                    src="assets/img/portfolio/app-3.png"
-                    class="img-fluid"
-                    alt="E-Commerce Platform"
-                  />
+                  <div class="project-icon-container ecommerce-project">
+                    <i class="bi bi-cart-fill display-1"></i>
+                    <div class="project-overlay">
+                      <span class="project-category">E-Commerce</span>
+                    </div>
+                  </div>
                   <div class="portfolio-info">
                     <h4>E-Commerce Solution</h4>
                     <p>Full-stack online store with payment integration</p>
-                    <a
-                      href="assets/img/portfolio/app-3.png"
-                      title="E-Commerce Platform"
-                      data-gallery="portfolio-gallery-web"
-                      class="glightbox preview-link"
-                      ><i class="bi bi-zoom-in"></i
-                    ></a>
+                    <div class="project-tech-stack">
+                      <span class="tech-badge">Laravel</span>
+                      <span class="tech-badge">Payment API</span>
+                      <span class="tech-badge">E-Commerce</span>
+                    </div>
                   </div>
                 </div>
               </div>
               <!-- End Portfolio Item -->
 
+              <!-- Intelligent Chatbot -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai"
               >
                 <div class="portfolio-content h-100">
-                  <div class="chatbot-project-placeholder">
-                    <i class="bi bi-chat-dots display-1 text-warning"></i>
-                    <h5>AI Chatbot System</h5>
+                  <div class="project-icon-container chatbot-project">
+                    <i class="bi bi-chat-square-dots-fill display-1"></i>
+                    <div class="project-overlay">
+                      <span class="project-category">NLP/AI</span>
+                    </div>
                   </div>
                   <div class="portfolio-info">
                     <h4>Intelligent Chatbot</h4>
                     <p>Real-time AI chatbot with Big Query integration</p>
+                    <div class="project-tech-stack">
+                      <span class="tech-badge">NLP</span>
+                      <span class="tech-badge">Big Query</span>
+                      <span class="tech-badge">AI</span>
+                    </div>
                   </div>
                 </div>
               </div>
               <!-- End Portfolio Item -->
 
+              <!-- Quality Control AI -->
               <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-iot"
               >
                 <div class="portfolio-content h-100">
-                  <div class="anomaly-project-placeholder">
-                    <i class="bi bi-shield-check display-1 text-danger"></i>
-                    <h5>Anomaly Detection System</h5>
+                  <div class="project-icon-container quality-control-project">
+                    <i class="bi bi-shield-check-fill display-1"></i>
+                    <div class="project-overlay">
+                      <span class="project-category">Quality Control</span>
+                    </div>
                   </div>
                   <div class="portfolio-info">
                     <h4>Quality Control AI</h4>
                     <p>Computer vision for 55% reduction in silicone treatment issues</p>
+                    <div class="project-tech-stack">
+                      <span class="tech-badge">Computer Vision</span>
+                      <span class="tech-badge">Quality Control</span>
+                      <span class="tech-badge">Manufacturing</span>
+                    </div>
                   </div>
                 </div>
               </div>

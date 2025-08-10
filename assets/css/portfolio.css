@@ -1,0 +1,244 @@
+/*
+ * Portfolio Styles - Diki Rustian Portfolio
+ * Enhanced styling for portfolio projects and components
+ * File: portfolio.css
+ * Last Updated: August 2025
+ */
+
+/* =================================
+   PORTFOLIO PROJECT CARDS
+   ================================= */
+
+/* Consistent project icon containers */
+.project-icon-container {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.project-icon-container i {
+  color: white;
+  margin-bottom: 1rem;
+  z-index: 2;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.project-icon-container:hover i {
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* Project overlay for category labels */
+.project-overlay {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  z-index: 3;
+}
+
+/* Individual project themes */
+.dye-matching-project {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.web-portfolio-project {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.lithology-ai-project {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.iot-automation-project {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.media-platform-project {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.bi-analytics-project {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.ecommerce-project {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+}
+
+.chatbot-project {
+  background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+}
+
+.quality-control-project {
+  background: linear-gradient(135deg, #fad0c4 0%, #ffd1ff 100%);
+}
+
+/* Hover effects */
+.project-icon-container:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* =================================
+   TECH STACK BADGES
+   ================================= */
+
+.project-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.tech-badge {
+  background: linear-gradient(45deg, #149ddd, #1a8bb8);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(20, 157, 221, 0.4);
+}
+
+/* =================================
+   PORTFOLIO INFO ENHANCEMENTS
+   ================================= */
+
+.portfolio-info {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 1.5rem;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.portfolio-info h4 {
+  color: #149ddd;
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.portfolio-info p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.details-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #149ddd;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.details-link:hover {
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
+/* =================================
+   PORTFOLIO FILTERS
+   ================================= */
+
+.portfolio-filters {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  padding: 1rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.portfolio-filters li {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0.8rem 1.5rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.portfolio-filters li:hover,
+.portfolio-filters li.filter-active {
+  background: linear-gradient(45deg, #149ddd, #1a8bb8);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* =================================
+   RESPONSIVE DESIGN
+   ================================= */
+
+@media (max-width: 768px) {
+  .project-icon-container {
+    min-height: 150px;
+  }
+  
+  .project-icon-container i {
+    font-size: 2.5rem;
+  }
+  
+  .project-tech-stack {
+    justify-content: center;
+  }
+  
+  .portfolio-filters {
+    padding: 0.5rem 1rem;
+  }
+  
+  .portfolio-filters li {
+    padding: 0.5rem 1rem;
+    margin: 0.2rem;
+  }
+}
+
+/* =================================
+   PORTFOLIO CONTENT CONTAINER
+   ================================= */
+
+.portfolio-content {
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.portfolio-content:hover {
+  border-color: #149ddd;
+  box-shadow: 0 15px 35px rgba(20, 157, 221, 0.2);
+}
+
+/* Animation for isotope filtering */
+.isotope-container {
+  transition: opacity 0.3s ease;
+}
+
+.isotope-container.filtering {
+  opacity: 0.5;
+}
