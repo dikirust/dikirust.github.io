@@ -93,17 +93,17 @@ body {
   color: var(--dark-text-primary) !important;
 }
 
-/* Portfolio specific fixes */
-.portfolio-info h4,
-.portfolio-info p {
+/* Portfolio specific fixes - Updated for new design */
+.portfolio .portfolio-item h4,
+.portfolio .portfolio-item p {
   color: var(--dark-text-primary) !important;
 }
 
-.portfolio .portfolio-info h4 {
-  color: var(--accent-primary) !important;
+.portfolio .portfolio-item .title {
+  color: var(--dark-text-primary) !important;
 }
 
-.portfolio .portfolio-info p {
+.portfolio .portfolio-item .description {
   color: var(--dark-text-secondary) !important;
 }
 
@@ -188,25 +188,16 @@ body {
 }
 
 /* =================================
-   PORTFOLIO FILTER ENHANCEMENT
+   PORTFOLIO DESIGN ENHANCEMENT
    ================================= */
 
-.portfolio .portfolio-filters li {
-  background: rgba(30, 41, 59, 0.6);
-  color: var(--dark-text-secondary);
-  padding: 8px 16px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+/* Portfolio items now follow services design pattern */
+.portfolio .portfolio-item {
   transition: all 0.3s ease;
 }
 
-.portfolio .portfolio-filters li:hover,
-.portfolio .portfolio-filters li.filter-active {
-  background: rgba(20, 157, 221, 0.3) !important;
-  color: var(--accent-primary) !important;
-  border-color: var(--accent-primary);
+.portfolio .portfolio-item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(20, 157, 221, 0.2);
 }
 
 /* =================================
@@ -464,6 +455,96 @@ body {
   left: 0;
   color: var(--accent-primary);
   font-weight: bold;
+}
+
+/* =================================
+   PORTFOLIO SECTION ENHANCEMENT
+   ================================= */
+
+.portfolio .portfolio-item .icon {
+  background: rgba(20, 157, 221, 0.2);
+  color: var(--accent-primary);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  transition: all 0.3s ease;
+}
+
+.portfolio .portfolio-item .icon i {
+  font-size: 1.8rem;
+  filter: drop-shadow(0 0 10px rgba(20, 157, 221, 0.3));
+}
+
+.portfolio .portfolio-item:hover .icon {
+  background: var(--accent-primary);
+  color: white;
+  transform: scale(1.1);
+}
+
+.portfolio .portfolio-item .title {
+  color: var(--dark-text-primary) !important;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.portfolio .portfolio-item .title a {
+  color: var(--dark-text-primary) !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.portfolio .portfolio-item .title a:hover {
+  color: var(--accent-primary) !important;
+}
+
+.portfolio .portfolio-item .description {
+  color: var(--dark-text-secondary) !important;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.portfolio .portfolio-item .portfolio-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.portfolio .portfolio-item .portfolio-features li {
+  color: var(--dark-text-muted) !important;
+  font-size: 0.9rem;
+  padding: 0.3rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.portfolio .portfolio-item .portfolio-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent-primary);
+  font-weight: bold;
+}
+
+/* Portfolio section specific styling */
+.portfolio.section.light-background .portfolio-item {
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.portfolio.section.light-background .portfolio-item:hover {
+  background: rgba(30, 41, 59, 0.95);
+  border-color: var(--accent-primary);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(20, 157, 221, 0.2);
 }
 
 /* =================================
